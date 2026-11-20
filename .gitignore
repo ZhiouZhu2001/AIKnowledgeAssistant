@@ -9,5 +9,22 @@ wheels/
 # Virtual environments
 .venv
 
-# Local environment
+# Environment variables or secrets
 .env
+.env*
+!.env.example
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases and logs
+*.db
+*.sqlite3
+*.log
+
+# Coverage reports
+.coverage
+htmlcov/
