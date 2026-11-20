@@ -1,0 +1,29 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: ai_knowledge_assistant_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "${KNOWLEDGE_DB_PASSWORD:?Set KNOWLEDGE_DB_PASSWORD in .env}"
+      POSTGRES_DB: ai_knowledge_assistant
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+
+  db_test:
+    image: pgvector/pgvector:pg17
+    profiles: [test]
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: "${KNOWLEDGE_TEST_DB_PASSWORD:-}"
+      POSTGRES_DB: ai_knowledge_assistant_test
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - db_test_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+  db_test_data:

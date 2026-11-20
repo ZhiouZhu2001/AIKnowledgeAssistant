@@ -28,3 +28,7 @@ Thumbs.db
 # Coverage reports
 .coverage
 htmlcov/
+
+# Secret files
+AI-Knowledge-Assistant-14-Day-Spec.md
+.scratch

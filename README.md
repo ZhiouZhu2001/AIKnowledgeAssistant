@@ -7,8 +7,7 @@ The project is being developed incrementally, with an emphasis on clean architec
 ## Current Features
 
 - REST API built with FastAPI
-- Health check endpoint (`GET /health`)
-- Automatic OpenAPI documentation
+- Health check endpoint
 - API tests using pytest and FastAPI TestClient
 - Reusable test fixtures
 - Dependency management with uv
