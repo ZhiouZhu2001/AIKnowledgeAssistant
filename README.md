@@ -56,7 +56,6 @@ http://127.0.0.1:8000/health
 ```bash
 uv run pytest -v
 ```
-
 The current test suite covers:
 
 | Test Case | Expected Result |
